@@ -43,21 +43,21 @@ class Command(BaseCommand):
         # Create Users
         self.stdout.write(self.style.WARNING('Creating users...'))
         marvel_heroes = [
-            {'username': 'iron_man', 'email': 'tony.stark@marvel.com', 'full_name': 'Tony Stark', 'password': 'jarvis123'},
-            {'username': 'captain_america', 'email': 'steve.rogers@marvel.com', 'full_name': 'Steve Rogers', 'password': 'shield123'},
-            {'username': 'thor', 'email': 'thor@asgard.com', 'full_name': 'Thor Odinson', 'password': 'mjolnir123'},
-            {'username': 'black_widow', 'email': 'natasha.romanoff@marvel.com', 'full_name': 'Natasha Romanoff', 'password': 'widow123'},
-            {'username': 'hulk', 'email': 'bruce.banner@marvel.com', 'full_name': 'Bruce Banner', 'password': 'smash123'},
-            {'username': 'spider_man', 'email': 'peter.parker@marvel.com', 'full_name': 'Peter Parker', 'password': 'web123'},
+            {'username': 'iron_man', 'email': 'tony.stark@marvel.com', 'full_name': 'Tony Stark', 'password': 'jarvis123', 'avatar_url': '/avatars/iron_man.svg'},
+            {'username': 'captain_america', 'email': 'steve.rogers@marvel.com', 'full_name': 'Steve Rogers', 'password': 'shield123', 'avatar_url': '/avatars/captain_america.svg'},
+            {'username': 'thor', 'email': 'thor@asgard.com', 'full_name': 'Thor Odinson', 'password': 'mjolnir123', 'avatar_url': '/avatars/thor.svg'},
+            {'username': 'black_widow', 'email': 'natasha.romanoff@marvel.com', 'full_name': 'Natasha Romanoff', 'password': 'widow123', 'avatar_url': '/avatars/black_widow.svg'},
+            {'username': 'hulk', 'email': 'bruce.banner@marvel.com', 'full_name': 'Bruce Banner', 'password': 'smash123', 'avatar_url': '/avatars/hulk.svg'},
+            {'username': 'spider_man', 'email': 'peter.parker@marvel.com', 'full_name': 'Peter Parker', 'password': 'web123', 'avatar_url': '/avatars/spider_man.svg'},
         ]
         
         dc_heroes = [
-            {'username': 'superman', 'email': 'clark.kent@dc.com', 'full_name': 'Clark Kent', 'password': 'krypton123'},
-            {'username': 'batman', 'email': 'bruce.wayne@dc.com', 'full_name': 'Bruce Wayne', 'password': 'gotham123'},
-            {'username': 'wonder_woman', 'email': 'diana.prince@dc.com', 'full_name': 'Diana Prince', 'password': 'themyscira123'},
-            {'username': 'flash', 'email': 'barry.allen@dc.com', 'full_name': 'Barry Allen', 'password': 'speed123'},
-            {'username': 'aquaman', 'email': 'arthur.curry@dc.com', 'full_name': 'Arthur Curry', 'password': 'atlantis123'},
-            {'username': 'green_lantern', 'email': 'hal.jordan@dc.com', 'full_name': 'Hal Jordan', 'password': 'willpower123'},
+            {'username': 'superman', 'email': 'clark.kent@dc.com', 'full_name': 'Clark Kent', 'password': 'krypton123', 'avatar_url': '/avatars/superman.svg'},
+            {'username': 'batman', 'email': 'bruce.wayne@dc.com', 'full_name': 'Bruce Wayne', 'password': 'gotham123', 'avatar_url': '/avatars/batman.svg'},
+            {'username': 'wonder_woman', 'email': 'diana.prince@dc.com', 'full_name': 'Diana Prince', 'password': 'themyscira123', 'avatar_url': '/avatars/wonder_woman.svg'},
+            {'username': 'flash', 'email': 'barry.allen@dc.com', 'full_name': 'Barry Allen', 'password': 'speed123', 'avatar_url': '/avatars/flash.svg'},
+            {'username': 'aquaman', 'email': 'arthur.curry@dc.com', 'full_name': 'Arthur Curry', 'password': 'atlantis123', 'avatar_url': '/avatars/aquaman.svg'},
+            {'username': 'green_lantern', 'email': 'hal.jordan@dc.com', 'full_name': 'Hal Jordan', 'password': 'willpower123', 'avatar_url': '/avatars/green_lantern.svg'},
         ]
         
         users_created = []
@@ -67,7 +67,8 @@ class Command(BaseCommand):
                 email=hero_data['email'],
                 full_name=hero_data['full_name'],
                 password=hero_data['password'],
-                team='Team Marvel'
+                team='Team Marvel',
+                avatar_url=hero_data['avatar_url']
             )
             users_created.append(user)
         
@@ -77,7 +78,8 @@ class Command(BaseCommand):
                 email=hero_data['email'],
                 full_name=hero_data['full_name'],
                 password=hero_data['password'],
-                team='Team DC'
+                team='Team DC',
+                avatar_url=hero_data['avatar_url']
             )
             users_created.append(user)
         

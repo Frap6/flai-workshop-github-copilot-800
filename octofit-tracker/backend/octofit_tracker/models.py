@@ -9,6 +9,7 @@ class User(models.Model):
     password = models.CharField(max_length=255)
     full_name = models.CharField(max_length=255)
     team = models.CharField(max_length=100, blank=True, null=True)
+    avatar_url = models.CharField(max_length=500, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
