@@ -1,0 +1,18 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50" fill="#D32F2F"/>
+  <!-- Mask -->
+  <ellipse cx="50" cy="50" rx="32" ry="35" fill="#C62828"/>
+  <!-- Web pattern -->
+  <line x1="50" y1="15" x2="50" y2="85" stroke="#000000" stroke-width="1"/>
+  <line x1="18" y1="50" x2="82" y2="50" stroke="#000000" stroke-width="1"/>
+  <line x1="25" y1="25" x2="75" y2="75" stroke="#000000" stroke-width="1"/>
+  <line x1="75" y1="25" x2="25" y2="75" stroke="#000000" stroke-width="1"/>
+  <ellipse cx="50" cy="50" rx="25" ry="28" fill="none" stroke="#000000" stroke-width="1"/>
+  <ellipse cx="50" cy="50" rx="15" ry="18" fill="none" stroke="#000000" stroke-width="1"/>
+  <!-- Eyes -->
+  <ellipse cx="38" cy="42" rx="10" ry="14" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <ellipse cx="62" cy="42" rx="10" ry="14" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <!-- Eye reflections -->
+  <ellipse cx="36" cy="38" rx="3" ry="5" fill="#E3F2FD"/>
+  <ellipse cx="60" cy="38" rx="3" ry="5" fill="#E3F2FD"/>
+</svg>
